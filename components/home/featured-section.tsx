@@ -36,12 +36,11 @@ export function FeaturedSection() {
   return (
     <section ref={ref} className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 cyber-grid opacity-50" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
-        <div 
-          className={`text-center mb-16 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+        <div
+          className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-4">
             Summit Focus Areas
@@ -58,9 +57,8 @@ export function FeaturedSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`group relative rounded-2xl overflow-hidden transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`group relative rounded-2xl overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
               style={{ transitionDelay: `${index * 150 + 200}ms` }}
             >
               {/* Background Image */}
@@ -82,9 +80,9 @@ export function FeaturedSection() {
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{feature.description}</p>
-                  <Button 
-                    asChild 
-                    variant="ghost" 
+                  <Button
+                    asChild
+                    variant="ghost"
                     className="p-0 h-auto text-primary hover:text-primary/80 hover:bg-transparent group/btn"
                   >
                     <Link href={feature.link} className="flex items-center gap-2">
@@ -96,8 +94,7 @@ export function FeaturedSection() {
               </div>
 
               {/* Hover border effect */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/30 transition-colors duration-500" />
-            </div>
+              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/30 transition-colors duration-500 pointer-events-none" />            </div>
           ))}
         </div>
       </div>
